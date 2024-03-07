@@ -42,13 +42,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="40dp"
         android:layout_marginEnd="117dp"
+        android:onClick="XuLyCong"
         android:text="TÍNH TỔNG"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintTop_toBottomOf="@+id/edtB"
+        app:layout_constraintVertical_bias="0.082" />
 
     <TextView
         android:id="@+id/textView3"
@@ -61,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnCong" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/edtKQ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -72,7 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnCong" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/edtB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
