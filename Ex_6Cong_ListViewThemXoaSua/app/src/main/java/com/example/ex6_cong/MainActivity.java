@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         btnSua = (Button) findViewById(R.id.btnSua);
         btnXoa = (Button) findViewById(R.id.btnXoa);
 
-        editTextSach = (EditText) findViewById(R.id.edtThem);
+        editTextSach = (EditText) findViewById(R.id.edtSach);
         // them du lieu ( tu 1 nguon or cho san ( hard-code)
         dsSach.add("Dễ mèn phiêu lưu kí");
         dsSach.add("Tôi thấy hoa vàng trên cỏ xanh");
