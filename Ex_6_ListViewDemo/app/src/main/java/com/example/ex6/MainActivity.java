@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         dsTenTinhThanhVN.add("TP Hồ Chí Minh");
         dsTenTinhThanhVN.add("Đồng Nai");
         dsTenTinhThanhVN.add("Bình Thuận");
-        dsTenTinhThanhVN.add("Nha Trang");
-
+        dsTenTinhThanhVN.add("Khánh Hòa");
+        dsTenTinhThanhVN.add("Bình Định");
         //b2: tạo adapter
         ArrayAdapter<String> adapterTinhThanh;
         adapterTinhThanh = new ArrayAdapter<String>(this,android.R.layout.
