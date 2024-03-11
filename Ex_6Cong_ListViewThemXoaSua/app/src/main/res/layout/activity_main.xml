@@ -8,23 +8,21 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="192dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="60dp"
+        android:layout_width="190dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
         android:text="LIST SÁCH TẠI THƯ VIỆN"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.779"
+        android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnThem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="94dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
         android:text="Thêm"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -33,9 +31,11 @@
         android:id="@+id/btnSua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="21dp"
         android:text="Sửa"
+        app:layout_constraintEnd_toStartOf="@+id/btnXoa"
         app:layout_constraintStart_toEndOf="@+id/btnThem"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -43,24 +43,41 @@
         android:id="@+id/btnXoa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="68dp"
         android:text="Xóa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ListView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/lvDSSach"
+        android:layout_width="390dp"
+        android:layout_height="531dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnThem"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/edtThem" />
+
+    <EditText
+        android:id="@+id/edtThem"
+        android:layout_width="210dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Mời nhập tên sách mới"
+        app:layout_constraintBottom_toTopOf="@+id/lvDSSach"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnThem" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
