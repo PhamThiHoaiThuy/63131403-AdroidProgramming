@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         lvTenTinhThanh.setAdapter(adapterTinhThanh);
 
         //3.3 lắng nghe và xử lý
-        
+
 
 
     }
