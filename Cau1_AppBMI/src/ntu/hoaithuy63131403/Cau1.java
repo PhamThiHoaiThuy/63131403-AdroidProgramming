@@ -17,6 +17,7 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.UIManager;
+import javax.swing.ImageIcon;
 
 public class Cau1 extends JFrame {
 
@@ -50,7 +51,7 @@ public class Cau1 extends JFrame {
 	 */
 	public Cau1() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 536, 617);
+		setBounds(100, 100, 550, 621);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(208, 232, 255));
 		contentPane.setForeground(new Color(208, 232, 255));
@@ -60,37 +61,37 @@ public class Cau1 extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Nhập chiều cao");
-		lblNewLabel.setBounds(88, 57, 107, 22);
+		lblNewLabel.setBounds(88, 216, 107, 22);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nhập cân nặng");
-		lblNewLabel_1.setBounds(88, 111, 107, 22);
+		lblNewLabel_1.setBounds(88, 282, 107, 22);
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(lblNewLabel_1);
 		
 		edtHeigh = new JTextField();
-		edtHeigh.setBounds(221, 56, 127, 29);
+		edtHeigh.setBounds(221, 215, 127, 29);
 		contentPane.add(edtHeigh);
 		edtHeigh.setColumns(10);
 		
 		edtWeigh = new JTextField();
-		edtWeigh.setBounds(221, 110, 127, 29);
+		edtWeigh.setBounds(221, 281, 127, 29);
 		contentPane.add(edtWeigh);
 		edtWeigh.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("BMI của bạn: ");
-		lblNewLabel_2.setBounds(88, 342, 98, 29);
+		lblNewLabel_2.setBounds(88, 445, 98, 29);
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(lblNewLabel_2);
 		
 		edtKq = new JTextField();
-		edtKq.setBounds(180, 344, 214, 29);
+		edtKq.setBounds(199, 447, 214, 29);
 		contentPane.add(edtKq);
 		edtKq.setColumns(10);
 		
 		Button btnKq = new Button("Kết quả");
-		btnKq.setBounds(122, 227, 118, 42);
+		btnKq.setBounds(126, 355, 118, 42);
 		btnKq.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnKq.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -135,7 +136,7 @@ public class Cau1 extends JFrame {
 		contentPane.add(btnKq);
 		
 		btnXoa = new Button("Xóa");
-		btnXoa.setBounds(306, 227, 107, 42);
+		btnXoa.setBounds(305, 355, 107, 42);
 		btnXoa.setForeground(new Color(0, 0, 0));
 		btnXoa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -151,12 +152,17 @@ public class Cau1 extends JFrame {
 		
 		lblNewLabel_3 = new JLabel("(m)");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_3.setBounds(368, 66, 45, 13);
+		lblNewLabel_3.setBounds(380, 221, 45, 13);
 		contentPane.add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("(kg)");
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_4.setBounds(368, 112, 45, 21);
+		lblNewLabel_4.setBounds(380, 283, 45, 21);
 		contentPane.add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("D:\\HoaiThuy\\BMI.png"));
+		lblNewLabel_5.setBounds(0, 10, 536, 262);
+		contentPane.add(lblNewLabel_5);
 	}
 }
