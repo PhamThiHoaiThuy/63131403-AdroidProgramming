@@ -28,7 +28,6 @@ public class Cau1 extends JFrame {
 	private Button btnXoa;
 	private JLabel lblNewLabel_3;
 	private JLabel lblNewLabel_4;
-	private JTextField txtKq;
 
 	/**
 	 * Launch the application.
@@ -81,17 +80,17 @@ public class Cau1 extends JFrame {
 		edtWeigh.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("BMI của bạn: ");
-		lblNewLabel_2.setBounds(123, 293, 98, 29);
+		lblNewLabel_2.setBounds(88, 331, 98, 29);
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(lblNewLabel_2);
 		
 		edtKq = new JTextField();
-		edtKq.setBounds(234, 295, 127, 29);
+		edtKq.setBounds(196, 333, 233, 29);
 		contentPane.add(edtKq);
 		edtKq.setColumns(10);
 		
 		Button btnKq = new Button("Kết quả");
-		btnKq.setBounds(135, 212, 118, 42);
+		btnKq.setBounds(133, 227, 118, 42);
 		btnKq.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnKq.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -120,10 +119,10 @@ public class Cau1 extends JFrame {
                     result = "Bạn đang bị béo phì";
                 }
 
-                String message = "Chỉ Số BMI của bạn: " + strBMI + "\n" + result;
-                JOptionPane.showMessageDialog(null, message, "Kết Quả BMI", JOptionPane.INFORMATION_MESSAGE);
-
-                edtKq.setText(strBMI);
+                edtKq.setText(String.format("%.2f", BMI) + " - " + result);
+           
+           
+                //edtKq.setText(strBMI);
 
             
         }
@@ -136,7 +135,7 @@ public class Cau1 extends JFrame {
 		contentPane.add(btnKq);
 		
 		btnXoa = new Button("Xóa");
-		btnXoa.setBounds(322, 212, 107, 42);
+		btnXoa.setBounds(322, 227, 107, 42);
 		btnXoa.setForeground(new Color(0, 0, 0));
 		btnXoa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -159,12 +158,5 @@ public class Cau1 extends JFrame {
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_4.setBounds(368, 112, 45, 21);
 		contentPane.add(lblNewLabel_4);
-		
-		txtKq = new JTextField();
-		txtKq.setBackground(new Color(208, 232, 255));
-		txtKq.setForeground(new Color(208, 232, 255));
-		txtKq.setBounds(228, 351, 143, 29);
-		contentPane.add(txtKq);
-		txtKq.setColumns(10);
 	}
 }
