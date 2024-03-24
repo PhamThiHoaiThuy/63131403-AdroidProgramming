@@ -24,6 +24,8 @@ public class Cau1 extends JFrame {
 	private JTextField edtWeigh;
 	private JTextField edtKq;
 	private Button btnXoa;
+	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_4;
 
 	/**
 	 * Launch the application.
@@ -116,10 +118,23 @@ public class Cau1 extends JFrame {
 		btnXoa.setForeground(new Color(0, 0, 0));
 		btnXoa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			}
+	                edtHeigh.setText("");
+	                edtWeigh.setText("");
+	            }
+			
 		});
 		btnXoa.setBackground(new Color(79, 100, 251));
 		btnXoa.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(btnXoa);
+		
+		lblNewLabel_3 = new JLabel("(m)");
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_3.setBounds(368, 66, 45, 13);
+		contentPane.add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("(kg)");
+		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_4.setBounds(368, 112, 45, 21);
+		contentPane.add(lblNewLabel_4);
 	}
 }
