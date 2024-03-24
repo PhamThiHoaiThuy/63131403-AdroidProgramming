@@ -98,7 +98,13 @@ public class Cau1 extends JFrame {
 		        int chieucao = Integer.parseInt(strHeigh);
 		        int cannang = Integer.parseInt(strWeigh);
 
-		       
+		        //Tính 
+		        float BMI = (float)cannang/ (chieucao* cannang);
+		        String strBMI = String.valueOf(BMI);
+
+		        //hiện ra màn hình
+		        edtKq.setText(strBMI);
+
 			}
 		});
 		btnKq.setForeground(new Color(0, 0, 0));
