@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -26,6 +28,7 @@ public class Cau1 extends JFrame {
 	private Button btnXoa;
 	private JLabel lblNewLabel_3;
 	private JLabel lblNewLabel_4;
+	private JTextField txtKq;
 
 	/**
 	 * Launch the application.
@@ -52,7 +55,7 @@ public class Cau1 extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(208, 232, 255));
 		contentPane.setForeground(new Color(208, 232, 255));
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBorder(null);
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -78,7 +81,7 @@ public class Cau1 extends JFrame {
 		edtWeigh.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("BMI của bạn: ");
-		lblNewLabel_2.setBounds(126, 293, 98, 29);
+		lblNewLabel_2.setBounds(123, 293, 98, 29);
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(lblNewLabel_2);
 		
@@ -104,11 +107,30 @@ public class Cau1 extends JFrame {
 		       	double BMI = cannang/ (chieucao* chieucao);
 		        String strBMI = String.valueOf(BMI);
 
-		        //hiện ra màn hình
-		        edtKq.setText(strBMI);
+//		        edtKq.setText(strBMI);
+		       	
+		        String result = "";
+                if (BMI < 18.5) {
+                    result = "Bạn đang gầy";
+                } else if (BMI >= 18.5 && BMI < 25) {
+                    result = "Bạn có cân nặng bình thường";
+                } else if (BMI >= 25 && BMI < 30) {
+                    result = "Bạn đang thừa cân";
+                } else {
+                    result = "Bạn đang bị béo phì";
+                }
 
-			}
-		});
+                String message = "Chỉ Số BMI của bạn: " + strBMI + "\n" + result;
+                JOptionPane.showMessageDialog(null, message, "Kết Quả BMI", JOptionPane.INFORMATION_MESSAGE);
+
+                edtKq.setText(strBMI);
+
+            
+        }
+    });
+
+
+   
 		btnKq.setForeground(new Color(0, 0, 0));
 		btnKq.setBackground(new Color(79, 100, 251));
 		contentPane.add(btnKq);
@@ -137,5 +159,12 @@ public class Cau1 extends JFrame {
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_4.setBounds(368, 112, 45, 21);
 		contentPane.add(lblNewLabel_4);
+		
+		txtKq = new JTextField();
+		txtKq.setBackground(new Color(208, 232, 255));
+		txtKq.setForeground(new Color(208, 232, 255));
+		txtKq.setBounds(228, 351, 143, 29);
+		contentPane.add(txtKq);
+		txtKq.setColumns(10);
 	}
 }
