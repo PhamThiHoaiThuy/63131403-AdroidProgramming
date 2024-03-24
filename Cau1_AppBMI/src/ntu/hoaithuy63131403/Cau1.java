@@ -116,13 +116,14 @@ public class Cau1 extends JFrame {
 		btnXoa = new Button("Xóa");
 		btnXoa.setBounds(322, 212, 107, 42);
 		btnXoa.setForeground(new Color(0, 0, 0));
-//		btnXoa.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) {
-//	                edtHeigh.setText("");
-//	                edtWeigh.setText("");
-//	            }
+		btnXoa.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+	                edtHeigh.setText("");
+	                edtWeigh.setText("");
+	                edtKq.setText("");
+	            }
 			
-//		});
+		});
 		btnXoa.setBackground(new Color(79, 100, 251));
 		btnXoa.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(btnXoa);
