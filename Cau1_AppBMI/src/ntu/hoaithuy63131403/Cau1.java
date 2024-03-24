@@ -101,7 +101,7 @@ public class Cau1 extends JFrame {
 		       double cannang = Double.parseDouble(strWeigh);
 
 		        //Tính 
-		       	double BMI = cannang/ (chieucao* cannang);
+		       	double BMI = cannang/ (chieucao* chieucao);
 		        String strBMI = String.valueOf(BMI);
 
 		        //hiện ra màn hình
