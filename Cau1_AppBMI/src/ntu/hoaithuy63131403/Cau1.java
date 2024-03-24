@@ -81,17 +81,17 @@ public class Cau1 extends JFrame {
 		edtWeigh.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("BMI của bạn: ");
-		lblNewLabel_2.setBounds(88, 445, 98, 29);
+		lblNewLabel_2.setBounds(88, 443, 98, 29);
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(lblNewLabel_2);
 		
 		edtKq = new JTextField();
-		edtKq.setBounds(199, 447, 214, 29);
+		edtKq.setBounds(196, 445, 214, 29);
 		contentPane.add(edtKq);
 		edtKq.setColumns(10);
 		
 		Button btnKq = new Button("Kết quả");
-		btnKq.setBounds(126, 355, 118, 42);
+		btnKq.setBounds(114, 355, 118, 42);
 		btnKq.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnKq.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -136,7 +136,7 @@ public class Cau1 extends JFrame {
 		contentPane.add(btnKq);
 		
 		btnXoa = new Button("Xóa");
-		btnXoa.setBounds(305, 355, 107, 42);
+		btnXoa.setBounds(297, 355, 107, 42);
 		btnXoa.setForeground(new Color(0, 0, 0));
 		btnXoa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
