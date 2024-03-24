@@ -97,11 +97,11 @@ public class Cau1 extends JFrame {
 				
 
 		        //chuyển DL
-		        int chieucao = Integer.parseInt(strHeigh);
-		        int cannang = Integer.parseInt(strWeigh);
+		        double chieucao = Double.parseDouble(strHeigh);
+		       double cannang = Double.parseDouble(strWeigh);
 
 		        //Tính 
-		        float BMI = (float)cannang/ (chieucao* cannang);
+		       	double BMI = cannang/ (chieucao* cannang);
 		        String strBMI = String.valueOf(BMI);
 
 		        //hiện ra màn hình
@@ -116,13 +116,13 @@ public class Cau1 extends JFrame {
 		btnXoa = new Button("Xóa");
 		btnXoa.setBounds(322, 212, 107, 42);
 		btnXoa.setForeground(new Color(0, 0, 0));
-		btnXoa.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-	                edtHeigh.setText("");
-	                edtWeigh.setText("");
-	            }
+//		btnXoa.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) {
+//	                edtHeigh.setText("");
+//	                edtWeigh.setText("");
+//	            }
 			
-		});
+//		});
 		btnXoa.setBackground(new Color(79, 100, 251));
 		btnXoa.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(btnXoa);
