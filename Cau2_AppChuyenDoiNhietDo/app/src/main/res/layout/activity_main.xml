@@ -37,8 +37,8 @@
         android:id="@+id/editTextText"
         android:layout_width="147dp"
         android:layout_height="54dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginEnd="88dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginEnd="76dp"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,34 +61,32 @@
         android:id="@+id/editTextText2"
         android:layout_width="153dp"
         android:layout_height="58dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="84dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="68dp"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="57dp"
-        android:text="Convert to Celsius"
+        android:layout_width="141dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="52dp"
+        android:text="Đổi sang độ C"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="52dp"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="55dp"
-        android:text="Convert to Ferihent"
+        android:layout_marginTop="48dp"
+        android:text="Đổi sang độ K"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toEndOf="@+id/button"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -97,13 +95,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
-        android:text="Clear"
+        android:text="Xóa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.067" />
+        app:layout_constraintVertical_bias="0.037" />
 
     <TextView
         android:id="@+id/textView5"
@@ -121,9 +119,9 @@
         android:layout_width="149dp"
         android:layout_height="44dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHorizontal_bias="0.181"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
