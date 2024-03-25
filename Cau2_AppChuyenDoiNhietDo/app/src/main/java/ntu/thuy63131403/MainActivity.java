@@ -59,7 +59,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
     void ChuyenSangDoK(){
+        String strC = editTextC.getText().toString();
+        //chuyển DL
+        double doC = Double.parseDouble(strC);
 
+        //Tính tổng
+        double doK = doC + 273.15;
+        String strdoK = String.valueOf(doK);
+
+        //hiện ra màn hình
+        textViewKq.setText(strdoK);
     }
     void Xoa(){
 
