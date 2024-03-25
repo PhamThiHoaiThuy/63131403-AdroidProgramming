@@ -3,6 +3,7 @@ package ntu.thuy63131403;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -12,11 +13,6 @@ public class MainActivity extends AppCompatActivity {
     EditText editTextC, editTextK;
     Button buttonDoC, buttonDoK, buttonXoa;
     TextView textViewKq;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
     void LayDL(){
         editTextC = findViewById(R.id.edtC);
         editTextK = findViewById(R.id.edtK);
@@ -24,6 +20,39 @@ public class MainActivity extends AppCompatActivity {
         buttonDoK = findViewById(R.id.btnK);
         buttonXoa = findViewById(R.id.btnXoa);
         textViewKq = findViewById(R.id.txtKq);
+    }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        LayDL();
+        buttonDoC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ChuyenSangDoC();
+            }
+        });
+        buttonDoK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ChuyenSangDoK();
+            }
+        });
+        buttonXoa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Xoa();
+            }
+        });
+    }
+    void ChuyenSangDoC(){
+
+    }
+    void ChuyenSangDoK(){
+
+    }
+    void Xoa(){
         
     }
+
 }
