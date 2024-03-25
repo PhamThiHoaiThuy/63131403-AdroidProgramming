@@ -46,27 +46,25 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     void ChuyenSangDoC(){
-        String strK = editTextK.getText().toString();
-        //chuyển DL
-        double doK = Double.parseDouble(strK);
-
-        //Tính tổng
-        double doC = doK - 273.15;
-
-        //hiện ra màn hình
-        textViewKq.setText(String.format("%.2f °C",doC));
-
+        try {
+            String strK = editTextK.getText().toString();
+            double doK = Double.parseDouble(strK);
+            double doC = doK - 273.15;
+            textViewKq.setText(String.format("%.2f °C", doC));
+        } catch (NumberFormatException e) {
+            textViewKq.setText("Mời bạn nhập vào ô độ K ");
+        }
     }
+
     void ChuyenSangDoK(){
-        String strC = editTextC.getText().toString();
-        //chuyển DL
-        double doC = Double.parseDouble(strC);
-
-        //Tính tổng
-        double doK = doC + 273.15;
-
-        //hiện ra màn hình
-        textViewKq.setText(String.format("%.2f K",doK));
+        try {
+            String strC = editTextC.getText().toString();
+            double doC = Double.parseDouble(strC);
+            double doK = doC + 273.15;
+            textViewKq.setText(String.format("%.2f K", doK));
+        } catch (NumberFormatException e) {
+            textViewKq.setText("Mời bạn nhập vào ô độ C ");
+        }
     }
     void Xoa(){
         editTextK.setText("");
