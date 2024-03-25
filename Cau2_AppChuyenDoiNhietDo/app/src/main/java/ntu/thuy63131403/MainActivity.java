@@ -46,13 +46,23 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     void ChuyenSangDoC(){
+        String strK = editTextK.getText().toString();
+        //chuyển DL
+        double doK = Double.parseDouble(strK);
+
+        //Tính tổng
+        double doC = doK - 273.15;
+        String strdoC = String.valueOf(doC);
+
+        //hiện ra màn hình
+        textViewKq.setText(strdoC);
 
     }
     void ChuyenSangDoK(){
 
     }
     void Xoa(){
-        
+
     }
 
 }
