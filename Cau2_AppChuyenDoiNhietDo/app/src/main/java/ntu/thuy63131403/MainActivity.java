@@ -52,10 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Tính tổng
         double doC = doK - 273.15;
-        String strdoC = String.valueOf(doC);
 
         //hiện ra màn hình
-        textViewKq.setText(strdoC);
+        textViewKq.setText(String.format("%.2f °C",doC));
 
     }
     void ChuyenSangDoK(){
@@ -65,13 +64,14 @@ public class MainActivity extends AppCompatActivity {
 
         //Tính tổng
         double doK = doC + 273.15;
-        String strdoK = String.valueOf(doK);
 
         //hiện ra màn hình
-        textViewKq.setText(strdoK);
+        textViewKq.setText(String.format("%.2f K",doK));
     }
     void Xoa(){
-
+        editTextK.setText("");
+        editTextC.setText("");
+        textViewKq.setText("");
     }
 
 }
