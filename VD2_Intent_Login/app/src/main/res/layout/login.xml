@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#60C0EC">
+    android:background="@drawable/hinh3">
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="410dp"
-        android:layout_height="75dp"
-        android:background="#FBBD00"
+        android:layout_width="445dp"
+        android:layout_height="86dp"
+        android:background="#A4D2E6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,13 +33,13 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="120dp"
         android:text="MÀN HÌNH ĐĂNG NHẬP"
         android:textColor="@color/black"
         android:textSize="35dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -126,7 +126,7 @@
         android:layout_width="163dp"
         android:layout_height="82dp"
         android:layout_marginStart="160dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="160dp"
         android:onClick="DangNhap"
         android:text="Xác Nhận"

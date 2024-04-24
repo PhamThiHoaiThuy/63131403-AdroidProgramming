@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class LoginActivity extends AppCompatActivity {
     EditText Name, Pass, EMail;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,12 +30,14 @@ public class LoginActivity extends AppCompatActivity {
 
         if(username.equals("hoaithuy")&&password.equals("123")&&email.equals("pththuy@gmail.com")){
             Toast.makeText(this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+            Intent ManHinhHome = new Intent(this, HomeActivity.class);
+            startActivity(ManHinhHome);
         }
         else {
             Toast.makeText(this, "Đăng nhập thất bại", Toast.LENGTH_SHORT).show();
         }
 
-        Intent ManHinhHome = new Intent(this, HomeActivity.class);
-        startActivity(ManHinhHome);
+
     }
 }
+
