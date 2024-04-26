@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         // by using there id.
         Fragment selectedFragment = null;
         int itemId = item.getItemId();
-        if (itemId == R.id.algorithm) {
+        if (itemId == R.id.home) {
             selectedFragment = new AlgorithmFragment();
         } else if (itemId == R.id.course) {
             selectedFragment = new CourseFragment();
