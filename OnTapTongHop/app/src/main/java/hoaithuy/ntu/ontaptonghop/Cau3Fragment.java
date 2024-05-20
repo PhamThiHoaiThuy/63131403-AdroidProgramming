@@ -3,45 +3,32 @@ package hoaithuy.ntu.ontaptonghop;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Cau3Fragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+
 public class Cau3Fragment extends Fragment {
+    //1. Khai báo các biến toàn cục
+    LandScapeAdapter adapter;
+    ArrayList<LandScape> list;
+    //2. Khai báo các biến đại diện cho các view cần tương tác
+    RecyclerView recyclerViewLandScape;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public Cau3Fragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Cau3Fragment.
-     */
-    // TODO: Rename and change types and number of parameters
+
     public static Cau3Fragment newInstance(String param1, String param2) {
         Cau3Fragment fragment = new Cau3Fragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -49,16 +36,41 @@ public class Cau3Fragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        //3. Chuẩn bị dữ liệu cho list
+        list = new ArrayList<LandScape>();
+        list.add(new LandScape("flag_tower_of_hanoi","Cột cờ Hà Nội"));
+        list.add(new LandScape("effel","Tháp Eiffel"));
+        list.add(new LandScape( "buckingham","Cung điện Buckingham"));
+        list.add(new LandScape( "statue_of_liberty","Tượng nữ thần tự do"));
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view_Cau3 = inflater.inflate(R.layout.fragment_cau3, container, false);
+        recyclerViewLandScape = view_Cau3.findViewById(R.id.ryCau3);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cau3, container, false);
+        //4. Tìm điều khiển Recycler
+        recyclerViewLandScape = view_Cau3.findViewById(R.id.ryCau3);
+
+        //5. Tạo layout manager để đặt bố cục cho Recycler
+        //hướng dọc:
+//        RecyclerView.LayoutManager layoutLinear = new LinearLayoutManager(view_Cau3.getContext());
+//        recyclerViewLandScape.setLayoutManager(layoutLinear);
+
+        // Tạo LinearLayoutManager với hướng ngang
+        RecyclerView.LayoutManager layoutLinearHorizonal = new LinearLayoutManager(view_Cau3.getContext(), LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewLandScape.setLayoutManager(layoutLinearHorizonal);
+
+        // Tạo GridLayoutManager với số cột mong muốn
+//        int numberOfColumns = 2; // Số cột bạn muốn hiển thị
+//        RecyclerView.LayoutManager layoutGrid = new GridLayoutManager(view_Cau3.getContext(), numberOfColumns);
+//        recyclerViewLandScape.setLayoutManager(layoutGrid);
+
+        //6. Tạo adapter gắn vào nguồn dữ liệu
+        adapter = new LandScapeAdapter(view_Cau3.getContext(), list);
+        //7, Gắn adapter vào Recycler
+        recyclerViewLandScape.setAdapter(adapter);
+        return view_Cau3;
     }
 }

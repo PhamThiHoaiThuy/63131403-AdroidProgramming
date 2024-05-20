@@ -13,8 +13,8 @@ import android.widget.Toast;
 
 
 public class Cau1Fragment extends Fragment {
-    EditText soM;
-    EditText soKM;
+    EditText ediTex_Met;
+    EditText ediTex_KiloMet;
     Button btnDoi;
 
     public Cau1Fragment() {
@@ -39,35 +39,31 @@ public class Cau1Fragment extends Fragment {
         // Inflate the layout for this fragment
         View view_Cau1 = inflater.inflate(R.layout.fragment_cau1, container, false);
         //tìm điêều khiển trong view này
-        soM = view_Cau1.findViewById(R.id.edtSoM);
-        soKM = view_Cau1.findViewById(R.id.edtSoKm);
+        ediTex_Met = view_Cau1.findViewById(R.id.edtSoM);
+        ediTex_KiloMet = view_Cau1.findViewById(R.id.edtSoKm);
         btnDoi = view_Cau1.findViewById(R.id.btnDoiDonVi);
         //lắng nghe sự kiện
         btnDoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String duLieuM = soM.getText().toString();
-                String duLieuKm = soKM.getText().toString();
-                if (!duLieuM.isEmpty()) { // Chuyển đổi từ mét sang kilômét
-                    try {
-                        double m = Double.parseDouble(duLieuM);
-                        double km = m / 1000; // 1 mét = 0.001 kilômét
-                        soKM.setText(String.valueOf(km));
-                        Toast.makeText(view_Cau1.getContext(), "Đã chuyển đổi từ m sang km", Toast.LENGTH_SHORT).show();
-                    } catch (NumberFormatException e) {
-                        Toast.makeText(view_Cau1.getContext(), "Vui lòng nhập số hợp lệ", Toast.LENGTH_SHORT).show();
-                    }
-                } else if (!duLieuKm.isEmpty()) { // Chuyển đổi từ kilômét sang mét
-                    try {
-                        double km = Double.parseDouble(duLieuKm);
-                        double m = km * 1000; // 1 kilômét = 1000 mét
-                        soM.setText(String.valueOf(m));
-                        Toast.makeText(view_Cau1.getContext(), "Đã chuyển đổi từ km sang m", Toast.LENGTH_SHORT).show();
-                    } catch (NumberFormatException e) {
-                        Toast.makeText(view_Cau1.getContext(), "Vui lòng nhập số hợp lệ", Toast.LENGTH_SHORT).show();
-                    }
+                String duLieuM = ediTex_Met.getText().toString();
+                String duLieuKm = ediTex_KiloMet.getText().toString();
+                if (!duLieuM.isEmpty()) {
+                    // Convert meters to kilometers
+
+                        double meters = Double.parseDouble(duLieuM);
+                        double kilometers = meters / 1000;
+                        ediTex_KiloMet.setText(String.format("%.3f", kilometers));
+                        Toast.makeText(view_Cau1.getContext(), "đổi từ m->km", Toast.LENGTH_SHORT).show();
+                } else if (!duLieuKm.isEmpty()) {
+                    // Convert kilometers to meters
+                        double kilometers = Double.parseDouble(duLieuKm);
+                        double meters = kilometers * 1000;
+                        ediTex_Met.setText(String.valueOf(meters));
+                        Toast.makeText(view_Cau1.getContext(), "đổi từ km->m", Toast.LENGTH_SHORT).show();
+
                 } else {
-                    Toast.makeText(view_Cau1.getContext(), "Vui lòng nhập giá trị cần chuyển đổi", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(view_Cau1.getContext(), "Dữ liệu không hợp lệ", Toast.LENGTH_SHORT).show();
                 }
             }
         });

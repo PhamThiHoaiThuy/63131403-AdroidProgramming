@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/edtSoM"
+    android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Cau1Fragment">
@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/edtSoM"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="18dp"
@@ -68,7 +68,7 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/edtSoM" />
 
     <Button
         android:id="@+id/btnDoiDonVi"
